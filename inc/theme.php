@@ -45,7 +45,3 @@ if(isset($_SESSION["Auth"]->id))
 	</section>
 </body>
 </html>
-<!--<h1>Session</h1>
-<pre><?php print_r($_SESSION); ?></pre>
-
-<pre><?php print_r($_SESSION["Auth"]->actions); ?></pre>-->
