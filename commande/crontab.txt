@@ -1,0 +1,1 @@
+30 13 10 * * C:\wamp\www\mail_de_notification.php
