@@ -2,10 +2,10 @@
 class connexion{
 
     private $pdo;
-    private $host = 'localhost';
-    private $dbname = 'qreport_db';
-    private $login = 'root';
-    private $password ='';
+    private $host = 'us-cdbr-iron-east-04.cleardb.net';
+    private $dbname = 'ad_a67e6e016ca75b1';
+    private $login = 'b54199b7dcff46';
+    private $password ='c0a474bd';
 
     public function __construct(){
         $this->pdo = new PDO("mysql:dbname=$this->dbname;host=$this->host", $this->login, $this->password);
