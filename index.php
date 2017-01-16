@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>PHP Starter Application</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-	<table>
-		<tr>
-			<td style='width: 30%;'>
-				<img class = 'newappIcon' src='images/newapp-icon.png'>
-			</td>
-			<td>
-				<h1 id = "message"><?php echo "Hello World!"; ?></h1>
-				<p class='description'></p> Thanks for creating a <span class="blue">PHP Starter Application</span>.
-			</td>
-		</tr>
-	</table>
-</body>
-</html>
+<?php
+
+session_start();
+
+require "inc/connexion.php";
+
+require "inc/class.auth.php";
+
+require "inc/class.download.php";
+
+require "inc/class.notification.php";
+
+if (!isset($_GET["p"])){ $_GET["p"] = 'login';}
+if (!file_exists($_GET["p"].'.php')) { $_GET["p"] = '404';}
+  
+ob_start();     
+include $_GET["p"].'.php';
+$content =  ob_get_contents();
+ob_end_clean();
+
+
+include "inc/theme.php";
+
+?>
