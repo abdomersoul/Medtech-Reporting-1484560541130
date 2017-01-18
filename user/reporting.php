@@ -63,7 +63,7 @@
 			
 			if($is_ok==1)
 			{
-				require("/inc/send_mail.php");
+				require("inc/send_mail.php");
 				$sujet= "Sujet : L'utilisateur ".$_SESSION["Auth"]->nom." ".$_SESSION["Auth"]->prenom." à Remplit le rapport du mois ".strftime("%B %Y",strtotime("-1 month") );
 				$body = "Salam,<br><br>L'utilisateur ".$_SESSION["Auth"]->nom." ".$_SESSION["Auth"]->prenom." à Remplit le rapport du mois ".strftime("%B %Y",strtotime("-1 month") )." le ".date("Y-m-d H:i:s").".<br><br>Cordialement.";
 				send_mail("abdelhadimersoul@gmail.com","Mersoul Abdelhadi",$sujet,$body);

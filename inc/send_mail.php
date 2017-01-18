@@ -3,7 +3,7 @@
 function send_mail($to,$name,$subject,$body)
 {
 
-	require("/PHPMailer_5.2.4/class.phpmailer.php");
+	require("PHPMailer_5.2.4/class.phpmailer.php");
 	//require("/PHPMailer-5.2.20/class.phpmailer.php");
 	$mail = new PHPMailer();
 	$mail->IsSMTP(); // set mailer to use SMTP

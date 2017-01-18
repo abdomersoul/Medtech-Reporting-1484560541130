@@ -208,8 +208,6 @@ $(function () {
 	<td id="date_envoi" data-value="<?php echo $d->date_envoi ?>"><?php echo $d->date_envoi ?></td>
 	<?php if($d->date_envoi!="X"): ?>
 	<td>
-		<!-- <a class="update" data-value="data-<?php echo $d->id_rapport ?>" href="#">Visualiser</a>
-		<a data-value="data-<?php echo $d->path ?>" href="<?php echo '../'.$d->path ?>" download>Telecharger</a> -->
 		
 		<form method="post" action="/admin/etat_envoi">
 		<input type="hidden" name="id_rapport" value="<?php echo $d->id_rapport ?>" />

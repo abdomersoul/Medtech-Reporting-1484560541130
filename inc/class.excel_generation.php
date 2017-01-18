@@ -4,7 +4,7 @@
 	{
 		function generate($rapport_id)
 		{
-			require_once "/PHPExcel/Classes/PHPExcel.php";
+			require_once "PHPExcel/Classes/PHPExcel.php";
 			$con = new connexion();
 			$data = $con->query("SELECT * FROM rapport WHERE id=".$rapport_id)->fetch();
 			

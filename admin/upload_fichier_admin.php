@@ -127,7 +127,7 @@
 				
 				$cont = $con->query("INSERT INTO notification VALUES(?,?,?,?,?,?)",['',$_SESSION["Auth"]->id,35,"l'utilisateur à Uploader un fichier",date("y-m-d"),1]);
 				
-				require("/inc/send_mail.php");
+				require("inc/send_mail.php");
 				$sujet= "Sujet : L'utilisateur ".$_SESSION["Auth"]->nom." ".$_SESSION["Auth"]->prenom." à envoyee un fichier";
 				$body = "Salam,<br><br>L'utilisateur ".$_SESSION["Auth"]->nom." ".$_SESSION["Auth"]->prenom." à envoyee un fichier le ".date("Y-m-d").".<br><br>Cordialement.";
 				send_mail("abdelhadimersoul@gmail.com","Mersoul Abdelhadi",$sujet,$body);
