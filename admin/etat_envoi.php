@@ -114,7 +114,7 @@ $(function () {
 });
 </script>
 
-<h2> <center>  <u> Reporting du mois de <?php setlocale(LC_TIME,'fr_FR.utf8','french'); echo strftime("%B %Y",strtotime($reporting_year."-".$reporting_month."-1")) ?>
+<h2> <center>  <u> Reporting du mois de <?php setlocale(LC_TIME,'fr_FR.UTF8', 'fr.UTF8', 'fr_FR.UTF-8', 'fr.UTF-8','french'); echo utf8_encode(strftime("%B %Y",strtotime($reporting_year."-".$reporting_month."-1"))) ?>
 	<?php
 	if(isset($id_mois_requete) && !empty($id_mois_requete))
 		echo " : Non Validé";
